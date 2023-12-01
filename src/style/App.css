@@ -16,7 +16,7 @@ body{
 
 .timeline {
     /*max-width: 1000px;*/
-    flex: 0 0 1000px;
+    flex: 0 0 800px;
 
     font-family: 'Inter', sans-serif;
 
@@ -131,7 +131,7 @@ body{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 30px;
+    gap: 20px;
     width: 100%;
 }
 .tweet-body{
@@ -188,11 +188,23 @@ body{
     width: 1.5rem;
     height: auto;
     color: #2F3336;
+    fill: #2F3336;
 }
 
-.tweet-action{
+.tweet-action {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    transition: all .2s;
+}
+
+.tweet-action:hover svg, .tweet-action:hover {
+    color: #1D9BF0;
+    fill: #1D9BF0;
+    cursor: pointer;
+}
+
+.tweet-title svg {
+    fill: #fff;
 }

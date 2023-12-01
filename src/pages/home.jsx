@@ -1,9 +1,14 @@
 import React from 'react';
+import TweetsList from '../components/tweetsList';
+import HomeHeader from '../components/HomeHeader';
+import TweetEditor from '../components/TweetEditor';
 
 function Home() {
     return (
         <main className="timeline">
-            <h1>Timeline heree</h1>
+            <HomeHeader />
+            <TweetEditor />
+            <TweetsList />
         </main>
 
     );
