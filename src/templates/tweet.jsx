@@ -1,5 +1,5 @@
 import ActionIcons from "./actionIcons";
-import CertifiedBadge from "./badge";
+import Badges from "./badges";
 import TweetImages from "./tweetImages";
 
 function TweetLayout(props) {
@@ -14,7 +14,7 @@ function TweetLayout(props) {
                     <h3 className="tweet-title-author">
                         {tweet.autor}
                     </h3>
-                    <span className="tweet-title-details">{tweet.isCertified && <CertifiedBadge />}</span>
+                    <span className="tweet-title-details">{tweet.isCertified && <Badges badge="certified" />}</span>
                     <span className="tweet-title-details">{tweet.autorDetails}</span>
                     <span className="tweet-title-details">·</span>
                     <span className="tweet-title-details">{tweet.lastTime}</span>

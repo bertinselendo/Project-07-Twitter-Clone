@@ -3,6 +3,7 @@
 
 body{
     background-color: black;
+    font-family: 'Inter', sans-serif;
     color: white;
     margin: 0 auto;
     max-width: 1800px;
@@ -142,7 +143,7 @@ body{
 .tweet-title{
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
     font-size: 1.3rem;
 }
@@ -211,7 +212,9 @@ body{
 
 .left-sidebar {
     width: 275px;
-    height: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .sl-top-section .navbar {
@@ -290,4 +293,52 @@ span.sl-notification {
 
 .sl-top-section .navbar a, .sl-top-section .navbar a path {
     transition: all .2s;
+}
+
+.sl-bottom-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+    align-items: center;
+}
+
+.sl-bs-body {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.sl-bs-body-title {
+    display: flex;
+    font-weight: 700;
+    gap: 5px;
+}
+
+.sl-bs-body-username {
+    color: #6E767D;
+    font-weight: 700;
+}
+
+.more-icon:hover svg, .more-icon:hover path {
+    color: #1c9bf1;
+    fill: #1c9bf1;
+}
+
+.more-icon {
+    cursor: pointer;
+}
+
+.sl-bs-body-content {
+    transition: all .2s;
+}
+
+.sl-bs-body-content:hover > div, .sl-bs-body-content:hover path {
+    color: #1c9bf1;
+    fill: #1c9bf1;
+}
+
+.sl-top-section li, .sl-top-section ul {
+    width: 100%;
 }
