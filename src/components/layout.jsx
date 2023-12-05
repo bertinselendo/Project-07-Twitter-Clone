@@ -1,9 +1,10 @@
 import React from 'react';
+import SidebarLeft from './SidebarLeft';
 
 function Layout({children}) {
     return (
         <>
-            <div className="left-sidebar"/>
+            <SidebarLeft />
             {children}
             <div className="right-sidebar" />
         </>
