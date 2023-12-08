@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SidebarIcons from "../templates/sidebarIcons";
-import TwitterIcon from "../templates/twitterIcon";
-import Badges from "../templates/badges";
+import TwitterIcon from "../templates/icons/twitterIcon";
+import Badges from "../templates/icons/badges";
 
 export default function SidebarLeft() {
   return (
     <div className="left-sidebar">
+      <div className="sfixed">
       <div className="sl-top-section">
         <ul className="navbar">
           <li>
@@ -142,6 +143,7 @@ export default function SidebarLeft() {
             />
           </svg>
         </div>
+      </div>
       </div>
     </div>
   );

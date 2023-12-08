@@ -1,5 +1,5 @@
-import ActionIcons from "./actionIcons";
-import Badges from "./badges";
+import ActionIcons from "./icons/actionIcons";
+import Badges from "./icons/badges";
 import TweetImages from "./tweetImages";
 
 function TweetLayout(props) {

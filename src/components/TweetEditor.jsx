@@ -1,4 +1,4 @@
-import EditorIcons from "../templates/editorIcons";
+import EditorIcons from "../templates/icons/editorIcons";
 
 
 function TweetEditor() {
