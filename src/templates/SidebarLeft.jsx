@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SidebarIcons from "../templates/sidebarIcons";
-import TwitterIcon from "../templates/icons/twitterIcon";
-import Badges from "../templates/icons/badges";
+import SidebarIcons from "./icons/sidebarIcons";
+import TwitterIcon from "./icons/twitterIcon";
+import Badges from "./icons/badges";
 
 export default function SidebarLeft() {
   return (
