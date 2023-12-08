@@ -7,7 +7,6 @@ import Badges from "../templates/icons/badges";
 export default function SidebarLeft() {
   return (
     <div className="left-sidebar">
-      <div className="sfixed">
       <div className="sl-top-section">
         <ul className="navbar">
           <li>
@@ -143,7 +142,6 @@ export default function SidebarLeft() {
             />
           </svg>
         </div>
-      </div>
       </div>
     </div>
   );
