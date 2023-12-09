@@ -20,31 +20,31 @@ function getNavbarItems() {
     {
       icon: "explore",
       text: "Explore",
-      link: "#",
+      link: "/explore",
       nbrs: false,
     },
     {
       icon: "notification",
       text: "Notifications",
-      link: "#",
+      link: "/notifications",
       nbrs: 7,
     },
     {
       icon: "message",
       text: "Messages",
-      link: "#",
+      link: "/messages",
       nbrs: 3,
     },
     {
       icon: "bookmark",
       text: "Bookmarks",
-      link: "#",
+      link: "/bookmarks",
       nbrs: 89,
     },
     {
       icon: "list",
       text: "Lists",
-      link: "#",
+      link: "/lists",
       nbrs: false,
     },
     {

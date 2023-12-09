@@ -6,6 +6,7 @@ import Layout from './components/layout'
 import Home from './pages/home'
 import Profile from './pages/profile'
 import NotFound from './pages/404'
+import UnderConstruction from './pages/underConstruction'
 
 const router = createBrowserRouter([
 	{
@@ -17,6 +18,22 @@ const router = createBrowserRouter([
 				element: <Home />
 			},
 			{
+				path: "/explore",
+				element: <UnderConstruction />
+			},
+			{
+				path: "/notifications",
+				element: <UnderConstruction />
+			},
+			{
+				path: "/bookmarks",
+				element: <UnderConstruction />
+			},
+			{
+				path: "/lists",
+				element: <UnderConstruction />
+			},
+			{
 				path: "/profile",
 				element: <Profile />
 			},
@@ -25,6 +42,10 @@ const router = createBrowserRouter([
 				element: <NotFound />
 			}
 		]
+	},
+	{
+		path: "/messages",
+		element: <UnderConstruction />,
 	}
 ])
 
