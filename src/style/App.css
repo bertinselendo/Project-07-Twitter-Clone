@@ -514,7 +514,7 @@ span.icon {
   border-radius: 50px;
 }
 
-.hover-white-darkist {
+.hover-white-darkist:hover {
   background: rgb(239 243 244 / 0.8);
 }
 

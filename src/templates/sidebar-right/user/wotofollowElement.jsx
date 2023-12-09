@@ -16,8 +16,8 @@ export default function WhoToFollowElement(props) {
             <span>{follow.userName}</span>
           </div>
         </div>
-        <div className="follow-element-btn">
-          <a href="#">Follow</a>
+        <div className="follow-element-btn ">
+          <a href="#" className='hover-white-darkist'>Follow</a>
         </div>
       </div>
     </>

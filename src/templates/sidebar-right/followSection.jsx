@@ -12,7 +12,7 @@ export default function FollowSection() {
           <WhoToFollow />
         </div>
         <div className="follow-section-more hover-dark">
-          <a href="#" className='hover-white-darkist'>Show more</a>
+          <a href="#">Show more</a>
         </div>
       </div>
     </>
