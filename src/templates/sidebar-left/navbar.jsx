@@ -76,7 +76,7 @@ export default function Navbar() {
               <div className="li-div">
                 <span className="sl-icon">
                   {navItem.nbrs != false ? (
-                    <span className="sl-notification">7</span>
+                    <span className="sl-notification">{navItem.nbrs}</span>
                   ) : (
                     ""
                   )}
