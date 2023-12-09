@@ -7,7 +7,7 @@ export default function WhoToFollow() {
 
   return (
     <>
-      {followLists.slice(0,2).map((follow) => (
+      {followLists.slice(0,5).map((follow) => (
         <WhoToFollowElement key={follow.id} follow={follow} />
         ))}
     </>

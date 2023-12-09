@@ -8,9 +8,11 @@ export default function SidebarRight() {
   return (
     <div className="rigth-sidebar">
       <SearchBar />
-      <TrendsSection />
-      <FollowSection />
-      <Footer />
+      <div className="inner-scroll-effect">
+        <TrendsSection />
+        <FollowSection />
+        <Footer />
+      </div>
     </div>
   );
 }

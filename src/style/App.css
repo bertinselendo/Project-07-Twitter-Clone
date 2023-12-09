@@ -64,6 +64,8 @@ body {
 .avatar-leftside img {
   border-radius: 100%;
   display: flex;
+  width: 40px;
+  height: auto;
 }
 
 .avatar img {
@@ -469,6 +471,7 @@ span.sl-notification {
   display: flex;
   flex-wrap: wrap;
   column-gap: 10px;
+  padding-bottom: 100px;
 }
 
 .footer a,
@@ -753,4 +756,11 @@ a.profile-edit-button {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.inner-scroll-effect {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: scroll;
 }

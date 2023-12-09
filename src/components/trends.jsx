@@ -7,7 +7,7 @@ export default function Trends() {
 
   return (
     <>
-      {trends.slice(0,2).map((trend) => (
+      {trends.slice(0,5).map((trend) => (
         <TrendEement key={trend.id} trend={trend} />
         ))}
     </>

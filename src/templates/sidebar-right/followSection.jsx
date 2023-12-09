@@ -1,5 +1,5 @@
 import React from 'react'
-import WhoToFollow from '../../components/whotofollow'
+import WhoToFollow from '../../components/whoToFollow'
 
 export default function FollowSection() {
   return (
