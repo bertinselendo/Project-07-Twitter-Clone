@@ -14,7 +14,7 @@ function ProfileInfos() {
           </span>
           <span>
             {profileInfo.isLink ? (
-              <a href={profileInfo.text}>{profileInfo.text}</a>
+              <a href={"//" + profileInfo.text} target="_blank">{profileInfo.text}</a>
             ) : (
               profileInfo.text
             )}
