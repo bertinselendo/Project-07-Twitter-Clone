@@ -3,14 +3,12 @@ import TweetsList from "../components/tweetsList";
 import HomeHeader from "../components/HomeHeader";
 import TweetEditor from "../components/TweetEditor";
 
-function Home() {
+function Profile() {
   return (
     <>
-      <HomeHeader />
-      <TweetEditor />
-      <TweetsList />
+      <h1>Profile Page</h1>
     </>
   );
 }
 
-export default Home;
+export default Profile;
