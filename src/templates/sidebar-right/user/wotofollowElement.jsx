@@ -6,7 +6,7 @@ export default function WhoToFollowElement(props) {
   console.log(follow);
   return (
     <>
-      <div className="follow-element">
+      <div className="follow-element hover-dark">
         <div className="follow-element-first">
           <div className="follow-element-image">
             <img src={follow.avatar} alt="" />

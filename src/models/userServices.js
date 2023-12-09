@@ -9,16 +9,34 @@ class UserServices {
       },
       {
         id: 567,
-        displayName: "Rachel Motolona",
-        userName: "@rachel",
+        displayName: "Le Monde",
+        userName: "@lemondefr",
         avatar: "/public/images/tweet-profile-photo.png",
       },
       {
         id: 234,
-        displayName: "The New York Times",
-        userName: "@nytimes",
+        displayName: "CNN",
+        userName: "@CNN",
         avatar: "/public/images/tweet-profile-photo.png",
       },
+      {
+        id: 345,
+        displayName: "BBC News",
+        userName: "@BBCNews",
+        avatar: "/public/images/tweet-profile-photo.png",
+      },
+      {
+        id: 90,
+        displayName: "Reuters",
+        userName: "@Reuters",
+        avatar: "/public/images/tweet-profile-photo.png",
+      },
+      {
+        id: 7364,
+        displayName: "The Guardian",
+        userName: "@gardian",
+        avatar: "/public/images/tweet-profile-photo.png",
+      }
     ];
     return followers;
   }

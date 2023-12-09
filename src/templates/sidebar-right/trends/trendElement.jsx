@@ -5,7 +5,7 @@ export default function TrendEement(props) {
   const trend = props.trend;
   return (
     <>
-      <div className="trend-element">
+      <div className="trend-element hover-dark">
         <div className="trend-element-content">
           <span>Trending in {trend.city}</span>
           <h5>{trend.htag}</h5>

@@ -63,6 +63,21 @@ class TweetServices {
           like: 678,
           view: "34M",
         }
+      },
+      {
+        id: 67839,
+        autor: "Le Monde",
+        isCertified: true,
+        autorDetails: "@lemondefr. 2h",
+        tweetAvatar: "/public/images/profile-photo.png",
+        text: "En direct, guerre Israël-Hamas : les Etats-Unis mettent leur veto à une résolution du Conseil de sécurité des Nations unies appelant à un cessez-le-feu à Gaza",
+        image: "/images/JfNvJ_9G.jpeg",
+        nbrs: {
+          comment: 123,
+          repost: 56,
+          like: 678,
+          view: "3M",
+        }
       }
     ];
     return tweets;

@@ -15,11 +15,10 @@ export default function SidebarLeft() {
                 <span className="sl-icon">
                   <TwitterIcon />
                 </span>
-                <span className="twitter-icon">Twitter</span>
               </div>
             </a>
           </li>
-          <li>
+          <li className="hover-gray hover-radius">
             <a href="#">
               <div className="li-div">
                 <span className="sl-icon">

@@ -15,7 +15,7 @@ export default function TrendsSection() {
         <div className="trends-section-content">
           <Trends />
         </div>
-        <div className="trends-section-more">
+        <div className="trends-section-more hover-dark">
           <a href="#">Show more</a>
         </div>
       </div>

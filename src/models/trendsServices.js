@@ -3,21 +3,33 @@ class TrendsServices {
     const trends = [
       {
         id: 78,
-        city: "Turkey",
-        htag: "#SQUID",
-        tweetNumber: 78900,
+        city: "France",
+        htag: "#EIFFELTOWER",
+        tweetNumber: 12000,
       },
       {
         id: 674,
-        city: "Turkey",
-        htag: "#SQUID",
-        tweetNumber: 78900,
+        city: "Japan",
+        htag: "#MTFUJI",
+        tweetNumber: 45000,
       },
       {
         id: 980,
-        city: "Turkey",
-        htag: "#SQUID",
-        tweetNumber: 78900,
+        city: "Italy",
+        htag: "#COLISEUM",
+        tweetNumber: 32000,
+      },
+      {
+        id: 980,
+        city: "Australia",
+        htag: "#SYDNEYOPERAHOUSE",
+        tweetNumber: 56000,
+      },
+      {
+        id: 980,
+        city: "Brazil",
+        htag: "#CHRISTTHEREDEEMER",
+        tweetNumber: 89000,
       },
     ];
     return trends;
