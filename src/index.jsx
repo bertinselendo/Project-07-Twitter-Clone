@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Layout from './components/layout'
 import Home from './pages/home'
 import Profile from './pages/profile'
+import NotFound from './pages/404'
 
 const router = createBrowserRouter([
 	{
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
 			{
 				path: "/profile",
 				element: <Profile />
+			},
+			{
+				path: "*",
+				element: <NotFound />
 			}
 		]
 	}
