@@ -170,7 +170,7 @@ span.tweet-title-details svg {
 .tweet-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 50px;
+  border-radius: 24px;
   border-color: #2f3336;
   border-style: solid;
   border-width: 1px;
@@ -186,25 +186,20 @@ span.tweet-title-details svg {
 }
 
 .tweet-actions svg {
-  width: 1.5rem;
+  width: 30px;
   height: auto;
   color: #2f3336;
   fill: #2f3336;
+  padding: 5px;
 }
 
 .tweet-action {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 5px;
   transition: all 0.2s;
-}
-
-.tweet-action:hover svg,
-.tweet-action:hover {
-  color: #1d9bf0;
-  fill: #1d9bf0;
-  cursor: pointer;
+  font-size: 14px;
 }
 
 .tweet-title svg {
@@ -522,3 +517,37 @@ span.icon {
 .hover-white-darkist {
   background: rgb(239 243 244 / 0.8);
 }
+
+.action-hover, .action-hover svg {
+  cursor: pointer;
+  transition: all .2s;
+  border-radius: 50px;
+}
+
+.action-hover-blue:hover {
+  color: #1d9bf0;
+}
+
+.action-hover-blue:hover svg {
+  fill: #1d9bf0;
+  background: rgba(29, 155, 240, 0.10);
+}
+
+.action-hover-green:hover {
+  color: #00ba7c;
+}
+
+.action-hover-green:hover svg {
+  fill: #00ba7c;
+  background: #071a14;
+}
+
+.action-hover-red:hover {
+  color: #f91880;
+}
+
+.action-hover-red:hover svg {
+  fill: #f91880;
+  background: #200914;
+}
+

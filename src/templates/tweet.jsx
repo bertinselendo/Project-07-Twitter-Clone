@@ -22,22 +22,22 @@ function TweetLayout(props) {
                 <div className="tweet-text">{tweet.text}</div>
                 <TweetImages images={tweet.image}  />
                 <div className="tweet-actions">
-                    <li className="tweet-action">
+                    <span role="button" className="tweet-action action-hover action-hover-blue">
                         <ActionIcons icon="comment" />
                         {tweet.nbrs.comment}
-                    </li>
-                    <li className="tweet-action">
+                    </span>
+                    <span role="button" className="tweet-action action-hover action-hover-green">
                         <ActionIcons icon="repost" />
                         {tweet.nbrs.repost}
-                    </li>
-                    <li className="tweet-action">
+                    </span>
+                    <span role="button" className="tweet-action action-hover action-hover-red">
                         <ActionIcons icon="like" />
                         {tweet.nbrs.like}
-                    </li>
-                    <li className="tweet-action">
+                    </span>
+                    <span role="button" className="tweet-action action-hover action-hover-blue">
                         <ActionIcons icon="view" />
                         {tweet.nbrs.view}
-                    </li>
+                    </span>
                 </div>
             </div>
         </div>
