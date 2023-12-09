@@ -10,6 +10,7 @@ class UserServices {
       description: "Développeur web, photographe, vidéographe, infographe.",
       follows: 50,
       followers: 11,
+      isCertified: true,
     };
 
     return userMainData;
@@ -53,6 +54,11 @@ class UserServices {
   static getUserFollowers() {
     const userFollowers = this.getUserMainData().followers;
     return userFollowers;
+  }
+
+  static isCertified() {
+    const isCertified = this.getUserMainData().isCertified;
+    return isCertified;
   }
 
   static getUserInfosData() {

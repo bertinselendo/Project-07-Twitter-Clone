@@ -61,6 +61,11 @@ body {
   width: 48px;
 }
 
+.avatar-leftside img {
+  border-radius: 100%;
+  display: flex;
+}
+
 .avatar img {
   max-width: 100%;
   max-height: 100px;
@@ -306,14 +311,15 @@ span.sl-notification {
 .sl-bottom-section {
   display: flex;
   justify-content: space-between;
-  padding: 5%;
+  padding: 13px;
+  margin: 10px;
   align-items: center;
 }
 
 .sl-bs-body {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
   text-decoration: none;
   color: #fff;
 }
@@ -322,11 +328,13 @@ span.sl-notification {
   display: flex;
   font-weight: 700;
   gap: 5px;
+  font-size: 15px;
 }
 
 .sl-bs-body-username {
   color: #6e767d;
-  font-weight: 700;
+  font-weight: 400;
+  font-size: 15px;
 }
 
 .more-icon {
@@ -439,7 +447,8 @@ span.sl-notification {
   align-items: center;
 }
 
-.follow-element-btn a, .main-404 a {
+.follow-element-btn a,
+.main-404 a {
   border-radius: 32px;
   background: #eff3f4;
   padding: 8px 15px;
@@ -725,7 +734,7 @@ a.profile-edit-button {
   gap: 5px;
   padding: 0;
   border-bottom: 1px solid transparent;
-  transition: all .2s;
+  transition: all 0.2s;
   line-height: 1em;
 }
 
