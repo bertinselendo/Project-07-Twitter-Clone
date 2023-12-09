@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import ActionIcons from "../icons/actionIcons";
+import TweetServices from "../../models/tweetServices";
 
 export default function TweetActions(props) {
-
   const nbrs = props;
+  const tweetID = props.id;
+
+  const [likes, setLike] = useState(nbrs.likes);
+
+  function handledLike(event) {
+    const classList = event.currentTarget.classList;
+
+    classList.contains("active")
+      ? (classList.remove("active"), setLike(likes - 1))
+      : (classList.add("active"), setLike(likes + 1));
+  }
 
   return (
     <div className="tweet-actions">
@@ -24,9 +35,10 @@ export default function TweetActions(props) {
       <span
         role="button"
         className="tweet-action action-hover action-hover-red"
+        onClick={handledLike}
       >
         <ActionIcons icon="like" />
-        {nbrs.likes}
+        {likes}
       </span>
       <span
         role="button"
