@@ -1,6 +1,6 @@
 import React from "react";
-import SidebarIcons from "../icons/sidebarIcons";
 import Trends from "../../components/trends";
+import NavIcons from "../icons/navIcons";
 
 export default function TrendsSection() {
   return (
@@ -9,7 +9,7 @@ export default function TrendsSection() {
         <div className="trends-seaction-header">
           <h4>Trends for you</h4>
           <span className="icon">
-            <SidebarIcons icon="setting" />
+            <NavIcons icon="setting" />
           </span>
         </div>
         <div className="trends-section-content">

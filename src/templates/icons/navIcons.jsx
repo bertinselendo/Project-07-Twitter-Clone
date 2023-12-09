@@ -1,4 +1,4 @@
-function SidebarIcons(props) {
+function NavIcons(props) {
   const icon = props.icon;
 
   if (icon === "home") {
@@ -180,4 +180,4 @@ function SidebarIcons(props) {
   }
 }
 
-export default SidebarIcons;
+export default NavIcons;

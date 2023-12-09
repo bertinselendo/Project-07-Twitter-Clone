@@ -229,6 +229,7 @@ span.tweet-title-details {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+    padding: 10px;
 }
 
 .sl-top-section {
