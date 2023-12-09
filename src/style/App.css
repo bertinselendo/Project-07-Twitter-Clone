@@ -51,6 +51,11 @@ body {
   border-bottom: 1px solid #2f3336;
 }
 
+.tweet:hover {
+  background: #080808;
+  cursor: pointer;
+}
+
 .avatar {
   height: 48px;
   width: 48px;
@@ -415,6 +420,7 @@ span.sl-notification {
 .follow-element-image img {
   width: 48px;
   height: 48px;
+  border-radius: 50px;
 }
 
 .follow-element-first {

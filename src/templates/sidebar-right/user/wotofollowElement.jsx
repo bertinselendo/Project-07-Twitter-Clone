@@ -3,7 +3,6 @@ import Moreicon from "../../../templates/icons/more";
 
 export default function WhoToFollowElement(props) {
   const follow = props.follow;
-  console.log(follow);
   return (
     <>
       <div className="follow-element hover-dark">

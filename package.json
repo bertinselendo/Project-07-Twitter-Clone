@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "html-react-parser": "^5.0.7",
     "react-router-dom": "^6.20.1"
   },
   "devDependencies": {

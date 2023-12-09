@@ -1,44 +1,34 @@
-import ActionIcons from "./icons/actionIcons";
+import TweetServices from "../models/tweetServices";
 import Badges from "./icons/badges";
-import TweetImages from "./tweetImages";
+import TweetActions from "./tweet/tweetActions";
+import TweetImages from "./tweet/tweetImages";
+import parse from 'html-react-parser';
 
 function TweetLayout(props) {
     const tweet = props.tweet;
+
+    const author = TweetServices.getAuthorTweet(tweet.authorID);
+
+
+
     return (
         <div className="tweet">
             <div className="tweet-avatar">
-                <img src={tweet.tweetAvatar} alt=""/>
+                <img src={author.avatar} alt=""/>
             </div>
             <div className="tweet-content">
                 <div className="tweet-title">
                     <h3 className="tweet-title-author">
-                        {tweet.autor}
+                        {author.displayName}
                     </h3>
-                    <span className="tweet-title-details">{tweet.isCertified && <Badges badge="certified" />}</span>
-                    <span className="tweet-title-details">{tweet.autorDetails}</span>
+                    <span className="tweet-title-details">{author.isCertified && <Badges badge="certified" />}</span>
+                    <span className="tweet-title-details">{author.userName}</span>
                     <span className="tweet-title-details">·</span>
                     <span className="tweet-title-details">{tweet.lastTime}</span>
                 </div>
-                <div className="tweet-text">{tweet.text}</div>
+                <div className="tweet-text">{parse(tweet.text)}</div>
                 <TweetImages images={tweet.image}  />
-                <div className="tweet-actions">
-                    <span role="button" className="tweet-action action-hover action-hover-blue">
-                        <ActionIcons icon="comment" />
-                        {tweet.nbrs.comment}
-                    </span>
-                    <span role="button" className="tweet-action action-hover action-hover-green">
-                        <ActionIcons icon="repost" />
-                        {tweet.nbrs.repost}
-                    </span>
-                    <span role="button" className="tweet-action action-hover action-hover-red">
-                        <ActionIcons icon="like" />
-                        {tweet.nbrs.like}
-                    </span>
-                    <span role="button" className="tweet-action action-hover action-hover-blue">
-                        <ActionIcons icon="view" />
-                        {tweet.nbrs.view}
-                    </span>
-                </div>
+                <TweetActions id={tweet.id} comment={tweet.nbrs.comment} repost={tweet.nbrs.repost} likes={tweet.nbrs.like} views={tweet.nbrs.view} />
             </div>
         </div>
     )
