@@ -1,5 +1,10 @@
+import UserServices from "../../models/userServices";
+
 class NavbarItems {
   static getNavbarItems() {
+
+    const user = UserServices;
+
     const navbarItems = [
       {
         icon: "twitter",
@@ -46,7 +51,7 @@ class NavbarItems {
       {
         icon: "profil",
         text: "Profil",
-        link: "/profile",
+        link: "/" + user.getUserName(),
         nbrs: false,
       },
       {
