@@ -3,7 +3,7 @@ class UserServices {
     const userMainData = {
       id: 789,
       displayName: "Bertin Selendo",
-      userName: "@bertinselendo",
+      userName: "bertinselendo",
       cover: "/images/profils/cover.jpeg",
       avatar: "/images/profils/avatar.jpg",
       description: "Développeur web, photographe, vidéographe, infographe.",

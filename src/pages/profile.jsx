@@ -24,7 +24,7 @@ function Profile() {
                 />
               </a>
               <h1 className="name">{user.getUserDisplayName()}</h1>
-              <p className="profile-username">{user.getUserName()}</p>
+              <p className="profile-username">@{user.getUserName()}</p>
             </div>
             <div className="phc-c2">
               <a href="#" className="profile-edit-button hover-gray">
