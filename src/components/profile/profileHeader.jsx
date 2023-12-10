@@ -1,10 +1,9 @@
 import React from "react";
-import BackIcon from "../icons/backIcon";
+import BackIcon from "../../templates/icons/backIcon";
 import UserServices from "../../models/userServices";
 import { useNavigate } from "react-router-dom";
 
 export default function ProfileHeader() {
-
   const user = UserServices;
   const userPostsNumber = UserServices.getUserPostsNumber();
   const navigate = useNavigate();

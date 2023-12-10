@@ -67,7 +67,7 @@ class TweetServices {
         },
       },
       {
-        id: 7984,
+        id: 5426,
         authorID: 7364,
         lastTime: "2h",
         text: `Ryan O’Neal has died at 82. <br><br><a href="http://theguardian.com/autumn23-tw" target="_blank">http://theguardian.com/autumn23-tw</a>`,
@@ -84,7 +84,6 @@ class TweetServices {
   }
 
   static getAuthorTweet(userId) {
-
     let rUser = false;
 
     const users = [
@@ -136,17 +135,16 @@ class TweetServices {
         userName: "@gardian",
         avatar: "/images/profils/K2qKoGla_400x400.png",
         isCertified: false,
-      }
+      },
     ];
 
     users.map((user) => {
-      if ( user.id === userId ) {
-        rUser =  user;
+      if (user.id === userId) {
+        rUser = user;
       }
-    })
+    });
 
     return rUser;
-
   }
 }
 

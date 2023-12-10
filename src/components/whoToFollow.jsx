@@ -1,15 +1,15 @@
 import React from "react";
 import UserServices from "../models/userServices";
-import WhoToFollowElement from "../templates/sidebar-right/user/wotofollowElement";
+import WhoToFollowElement from "@components/sidebar-right/user/wotofollowElement";
 
 export default function WhoToFollow() {
   const followLists = UserServices.getWhoToFollow();
 
   return (
     <>
-      {followLists.slice(0,5).map((follow) => (
+      {followLists.slice(0, 5).map((follow) => (
         <WhoToFollowElement key={follow.id} follow={follow} />
-        ))}
+      ))}
     </>
   );
 }

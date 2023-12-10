@@ -14,13 +14,13 @@ class TrendsServices {
         tweetNumber: 45000,
       },
       {
-        id: 980,
+        id: 4546,
         city: "Italy",
         htag: "#COLISEUM",
         tweetNumber: 32000,
       },
       {
-        id: 980,
+        id: 872,
         city: "Australia",
         htag: "#SYDNEYOPERAHOUSE",
         tweetNumber: 56000,

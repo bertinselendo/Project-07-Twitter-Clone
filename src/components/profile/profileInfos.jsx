@@ -1,5 +1,5 @@
 import React from "react";
-import ProfilInfosIcons from "../icons/profilInfosIcons";
+import ProfilInfosIcons from "../../templates/icons/profilInfosIcons";
 import UserServices from "../../models/userServices";
 
 function ProfileInfos() {
@@ -7,14 +7,16 @@ function ProfileInfos() {
 
   return (
     <>
-      {userInfosData.map((profileInfo) => (
-        <div className="profile-info">
+      {userInfosData.map((profileInfo, index) => (
+        <div key={index} className="profile-info">
           <span>
             <ProfilInfosIcons icon={profileInfo.nom} />
           </span>
           <span>
             {profileInfo.isLink ? (
-              <a href={"//" + profileInfo.text} target="_blank">{profileInfo.text}</a>
+              <a href={"//" + profileInfo.text} target="_blank">
+                {profileInfo.text}
+              </a>
             ) : (
               profileInfo.text
             )}

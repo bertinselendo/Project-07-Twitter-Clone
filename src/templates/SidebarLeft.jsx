@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Badges from "./icons/badges";
-import Navbar from "./sidebar-left/navbar";
-import ProfileBottom from "./sidebar-left/profileBottom";
+import Navbar from "@components/sidebar-left/navbar";
+import ProfileBottom from "@components/sidebar-left/profileBottom";
 
 export default function SidebarLeft() {
   return (

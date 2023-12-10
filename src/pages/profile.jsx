@@ -1,8 +1,7 @@
 import React from "react";
-import BackIcon from "../templates/icons/backIcon";
 import UserServices from "../models/userServices";
-import ProfileInfos from "../templates/profile/profileInfos";
-import ProfileHeader from "../templates/profile/profileHeader";
+import ProfileInfos from "../components/profile/profileInfos";
+import ProfileHeader from "../components/profile/profileHeader";
 
 function Profile() {
   const user = UserServices;

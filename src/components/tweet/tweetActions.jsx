@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import ActionIcons from "../icons/actionIcons";
-import TweetServices from "../../models/tweetServices";
+import ActionIcons from "../../templates/icons/actionIcons";
 
 export default function TweetActions(props) {
   const nbrs = props;

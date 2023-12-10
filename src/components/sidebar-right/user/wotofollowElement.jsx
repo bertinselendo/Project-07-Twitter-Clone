@@ -1,5 +1,4 @@
 import React from "react";
-import Moreicon from "../../../templates/icons/more";
 
 export default function WhoToFollowElement(props) {
   const follow = props.follow;
@@ -16,7 +15,9 @@ export default function WhoToFollowElement(props) {
           </div>
         </div>
         <div className="follow-element-btn ">
-          <a href="#" className='hover-white-darkist'>Follow</a>
+          <a href="#" className="hover-white-darkist">
+            Follow
+          </a>
         </div>
       </div>
     </>

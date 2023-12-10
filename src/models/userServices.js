@@ -1,5 +1,4 @@
 class UserServices {
-
   static getUserMainData() {
     const userMainData = {
       id: 789,

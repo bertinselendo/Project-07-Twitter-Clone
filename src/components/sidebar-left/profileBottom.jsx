@@ -1,8 +1,8 @@
 import React from "react";
-import Badges from "../icons/badges";
+import Badges from "@templates/icons/badges";
 import UserServices from "../../models/userServices";
 import { Link } from "react-router-dom";
-import Moreicon from "../icons/more";
+import Moreicon from "../../templates/icons/more";
 
 export default function ProfileBottom() {
   const user = UserServices;

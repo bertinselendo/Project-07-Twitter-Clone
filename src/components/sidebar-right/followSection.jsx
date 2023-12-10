@@ -1,10 +1,10 @@
-import React from 'react'
-import WhoToFollow from '../../components/whoToFollow'
+import React from "react";
+import WhoToFollow from "../../components/whoToFollow";
 
 export default function FollowSection() {
   return (
     <>
-    <div className="follow-section">
+      <div className="follow-section">
         <div className="follow-seaction-header">
           <h4>Who to follow</h4>
         </div>
@@ -16,5 +16,5 @@ export default function FollowSection() {
         </div>
       </div>
     </>
-  )
+  );
 }

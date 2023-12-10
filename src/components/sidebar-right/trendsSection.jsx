@@ -1,6 +1,6 @@
 import React from "react";
-import Trends from "../../components/trends";
-import NavIcons from "../icons/navIcons";
+import Trends from "../trends";
+import NavIcons from "../../templates/icons/navIcons";
 
 export default function TrendsSection() {
   return (

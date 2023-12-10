@@ -1,8 +1,8 @@
 import React from "react";
-import SearchBar from "./sidebar-right/searchBar";
-import FollowSection from "./sidebar-right/followSection";
+import SearchBar from "@components/sidebar-right/searchBar";
+import FollowSection from "@components//sidebar-right/followSection";
 import Footer from "./footer";
-import TrendsSection from "./sidebar-right/trendsSection";
+import TrendsSection from "@components//sidebar-right/trendsSection";
 
 export default function SidebarRight() {
   return (
