@@ -660,8 +660,9 @@ span.icon {
 
 .profile-hero-content .profile-avatar {
   width: 135px;
-  height: auto;
+  height: 135px;
   border-radius: 100%;
+  background: #16181c;
 }
 
 .profile-hero-content h1.name {
@@ -776,4 +777,12 @@ a.profile-edit-button {
   flex-direction: column;
   gap: 15px;
   overflow-y: scroll;
+}
+
+.profile-error-content {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
