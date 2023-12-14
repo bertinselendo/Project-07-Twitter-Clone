@@ -164,6 +164,10 @@ span.tweet-title-details svg {
   width: 1.5rem;
   height: auto;
 }
+.tweet-title a {
+  color: #fff;
+  text-decoration: none;
+}
 .tweet-title-author {
   font-size: 18px;
 }
@@ -225,7 +229,7 @@ span.tweet-title-details svg {
 }
 
 .tweet-title svg {
-  fill: #fff;
+  fill: #1a8cd8;
 }
 
 .left-sidebar {
@@ -665,6 +669,15 @@ span.icon {
   font-size: 20px;
   margin-top: 10px;
   font-weight: 800;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.profile-hero-content h1.name svg {
+  width: 18px;
+  height: 18px;
+  fill: #1a8cd8;
 }
 
 p.profile-username {

@@ -1,30 +1,31 @@
 import React from "react";
-import UserServices from "../models/userServices";
+import UsersServices from "../models/usersServices";
 import ProfileInfos from "../components/profile/profileInfos";
 import ProfileHeader from "../components/profile/profileHeader";
+import { useParams } from "react-router-dom";
+import Badges from "../templates/icons/badges";
 
 function Profile() {
-  const user = UserServices;
+  const { userName } = useParams("username");
+
+  const users = UsersServices;
+  const user = users.getUserByUserName(userName);
 
   return (
     <>
-      <ProfileHeader />
+      <ProfileHeader user={user} />
       <div className="profile-hero">
         <div className="profile-cover">
-          <img src={user.getUserCover()} alt="" />
+          <img src={user.cover} alt="" />
         </div>
         <div className="profile-hero-content">
           <div className="phc-row-1">
             <div className="phc-c1">
               <a href="#">
-                <img
-                  src={user.getUserAvatar()}
-                  alt=""
-                  className="profile-avatar"
-                />
+                <img src={user.avatar} alt="" className="profile-avatar" />
               </a>
-              <h1 className="name">{user.getUserDisplayName()}</h1>
-              <p className="profile-username">@{user.getUserName()}</p>
+              <h1 className="name">{user.displayName} {user.isCertified ? <Badges badge="certified" /> : ""}</h1>
+              <p className="profile-username">@{userName}</p>
             </div>
             <div className="phc-c2">
               <a href="#" className="profile-edit-button hover-gray">
@@ -34,18 +35,18 @@ function Profile() {
           </div>
           <div className="phc-row-2">
             <div className="profile-description">
-              <p>{user.getUserDescription()}</p>
+              <p>{user.description}</p>
             </div>
             <div className="profile-infos">
-              <ProfileInfos />
+              <ProfileInfos infosData={user.infosData} />
             </div>
             <div className="profile-others">
               <a href="#" className="profile-other">
-                <span>{user.getUserFollows()}</span>
+                <span>{user.follows}</span>
                 <span className="text">abonnements</span>
               </a>
               <a href="#" className="profile-other">
-                <span>{user.getUserFollowers()}</span>
+                <span>{user.followers}</span>
                 <span className="text">abonnés</span>
               </a>
             </div>

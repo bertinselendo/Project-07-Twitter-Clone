@@ -1,9 +1,9 @@
 import React from "react";
-import UserServices from "../models/userServices";
+import UsersServices from "../models/usersServices";
 import WhoToFollowElement from "@components/sidebar-right/user/wotofollowElement";
 
 export default function WhoToFollow() {
-  const followLists = UserServices.getWhoToFollow();
+  const followLists = UsersServices.getWhoToFollow();
 
   return (
     <>

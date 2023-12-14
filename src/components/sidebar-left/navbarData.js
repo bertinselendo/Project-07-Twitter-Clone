@@ -1,9 +1,10 @@
-import UserServices from "../../models/userServices";
+import UserServices from "../../models/usersServices";
 
 class NavbarItems {
   static getNavbarItems() {
 
-    const user = UserServices;
+    const currentUserID = UserServices.currentUserID;
+    const userName = UserServices.getUserName(currentUserID)
 
     const navbarItems = [
       {
@@ -51,7 +52,7 @@ class NavbarItems {
       {
         icon: "profil",
         text: "Profil",
-        link: "/" + user.getUserName(),
+        link: "/" + userName,
         nbrs: false,
       },
       {

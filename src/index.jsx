@@ -7,7 +7,7 @@ import Home from "./pages/home";
 import Profile from "./pages/profile";
 import NotFound from "./pages/404";
 import UnderConstruction from "./pages/underConstruction";
-import UserServices from "./models/userServices";
+import UserServices from "./models/usersServices";
 
 const user = UserServices;
 
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
         element: <UnderConstruction />,
       },
       {
-        path: "/" + user.getUserName(),
+        path: "/:userName",
         element: <Profile />,
       },
       {

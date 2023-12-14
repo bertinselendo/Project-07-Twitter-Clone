@@ -1,9 +1,8 @@
 import React from "react";
 import ProfilInfosIcons from "../../templates/icons/profilInfosIcons";
-import UserServices from "../../models/userServices";
 
-function ProfileInfos() {
-  const userInfosData = UserServices.getUserInfosData();
+function ProfileInfos({infosData}) {
+  const userInfosData = infosData;
 
   return (
     <>

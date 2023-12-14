@@ -3,6 +3,7 @@ import Badges from "./icons/badges";
 import TweetImages from "../components/tweet/tweetImages";
 import parse from "html-react-parser";
 import TweetActions from "../components/tweet/tweetActions";
+import { Link } from "react-router-dom";
 
 function TweetLayout(props) {
   const tweet = props.tweet;
@@ -12,15 +13,17 @@ function TweetLayout(props) {
   return (
     <div className="tweet">
       <div className="tweet-avatar">
-        <img src={author.avatar} alt="" />
+        <Link to={author.userName}>
+          <img src={author.avatar} alt="" />
+        </Link>
       </div>
       <div className="tweet-content">
         <div className="tweet-title">
-          <h3 className="tweet-title-author">{author.displayName}</h3>
+          <Link to={author.userName}><h3 className="tweet-title-author">{author.displayName}</h3></Link>
           <span className="tweet-title-details">
             {author.isCertified && <Badges badge="certified" />}
           </span>
-          <span className="tweet-title-details">{author.userName}</span>
+          <span className="tweet-title-details">@{author.userName}</span>
           <span className="tweet-title-details">·</span>
           <span className="tweet-title-details">{tweet.lastTime}</span>
         </div>

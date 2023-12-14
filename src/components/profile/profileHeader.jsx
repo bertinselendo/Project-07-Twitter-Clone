@@ -1,11 +1,11 @@
 import React from "react";
 import BackIcon from "../../templates/icons/backIcon";
-import UserServices from "../../models/userServices";
+import UserServices from "../../models/usersServices";
 import { useNavigate } from "react-router-dom";
 
-export default function ProfileHeader() {
-  const user = UserServices;
-  const userPostsNumber = UserServices.getUserPostsNumber();
+export default function ProfileHeader({user}) {
+  const {id, displayName} = user;
+  const userPostsNumber = UserServices.getUserLikesNumber(id);
   const navigate = useNavigate();
 
   return (
@@ -17,7 +17,7 @@ export default function ProfileHeader() {
           </a>
         </div>
         <div className="profile-header-content">
-          <p className="name">{user.getUserDisplayName()}</p>
+          <p className="name">{displayName}</p>
           <p className="nbrs-post">{userPostsNumber} J'aime</p>
         </div>
       </div>
