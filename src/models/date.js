@@ -12,7 +12,9 @@ function tweetTimeDifference(postDate) {
   const hoursDifference = Math.floor(timeDifference / (60 * 60 * 1000));
   const daysDifference = Math.floor(timeDifference / (24 * 60 * 60 * 1000));
 
-  if (minutesDifference < 60) {
+  if (minutesDifference == 0) {
+    return `Maintenant`;
+  } else if (minutesDifference < 60) {
     return `Il y a ${minutesDifference} minute${
       minutesDifference !== 1 ? "s" : ""
     }`;
