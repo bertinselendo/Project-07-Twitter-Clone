@@ -4,11 +4,13 @@ import TweetImages from "../components/tweet/tweetImages";
 import parse from "html-react-parser";
 import TweetActions from "../components/tweet/tweetActions";
 import { Link } from "react-router-dom";
+import tweetTimeDifference from "../models/date";
 
 function TweetLayout(props) {
   const tweet = props.tweet;
 
   const author = TweetServices.getAuthorTweet(tweet.authorID);
+  const lastTime = tweetTimeDifference(tweet.lastTime);
 
   return (
     <div className="flex gap-4 p-4 w-full border-b border-gray-text">
@@ -33,7 +35,7 @@ function TweetLayout(props) {
           </span>
           <span className="">@{author.userName}</span>
           <span className="">·</span>
-          <span className="">{tweet.lastTime}</span>
+          <span className="">{lastTime}</span>
         </div>
         <div className="">{parse(tweet.text)}</div>
         <TweetImages images={tweet.image} />

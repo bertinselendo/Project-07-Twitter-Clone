@@ -1,85 +1,8 @@
+import tweetsJson from "../data/initial-data.json";
+
 class TweetServices {
   static tweets() {
-    const tweets = [
-      {
-        id: 0,
-        authorID: 234,
-        lastTime: "7m",
-        text: `President Joe Biden touted a new agreement reached with the European Union to ease Trump-era tariffs on aluminum and steel as a 'major breakthrough' that would serve to both strengthen the US steel industry and combat the global climate crisis`,
-        image: null,
-        nbrs: {
-          comment: 123,
-          repost: 56,
-          like: 678,
-          view: 7890,
-        },
-      },
-      {
-        id: 1,
-        authorID: 78,
-        lastTime: "2h",
-        text: `\"I knew my marriage was over. I knew I would need to use my half of the savings to hire a lawyer. And I vowed — a loaded verb choice, I know, given the context — never to be financially dependent on a man again,\" Maggie Smith writes in Modern Love.`,
-        image: "/images/7vYg19C9.jpeg",
-        nbrs: {
-          comment: 31,
-          repost: 9,
-          like: 113,
-          view: "75k",
-        },
-      },
-      {
-        id: 2,
-        authorID: 1,
-        lastTime: "1 août",
-        text: `Free expression is fundamental to a healthy functioning global society - and if it's taken away, it's almost impossible to get back. That's why we will continue to stand up for people's rights, including the over half a billion of you who turn to our platform continually.`,
-        image: null,
-        nbrs: {
-          comment: 123,
-          repost: 56,
-          like: 678,
-          view: "67M",
-        },
-      },
-      {
-        id: 67839,
-        authorID: 567,
-        lastTime: "2h",
-        text: `En direct, guerre Israël-Hamas : les Etats-Unis mettent leur veto à une résolution du Conseil de sécurité des Nations unies appelant à un cessez-le-feu à Gaza`,
-        image: "/images/JfNvJ_9G.jpeg",
-        nbrs: {
-          comment: 123,
-          repost: 56,
-          like: 678,
-          view: "3M",
-        },
-      },
-      {
-        id: 7984,
-        authorID: 7364,
-        lastTime: "2h",
-        text: `Missed out on a bargain last Friday? Don't make the same mistake twice. <br>Get up to 25% off a home delivery subscription to the Guardian and Observer today, for a limited time. Last chance: http://theguardian.com/autumn23-tw`,
-        image: "/images/F_tMAhqXUAAsLOu.jpeg",
-        nbrs: {
-          comment: 12,
-          repost: 3,
-          like: 7,
-          view: "37k",
-        },
-      },
-      {
-        id: 5426,
-        authorID: 7364,
-        lastTime: "2h",
-        text: `Ryan O’Neal has died at 82. <br><br><a href="http://theguardian.com/autumn23-tw" target="_blank">http://theguardian.com/autumn23-tw</a>`,
-        image: false,
-        nbrs: {
-          comment: 12,
-          repost: 3,
-          like: 7,
-          view: "37k",
-        },
-      },
-    ];
+    const tweets = tweetsJson.tweets;
     return tweets;
   }
 
@@ -145,6 +68,26 @@ class TweetServices {
     });
 
     return rUser;
+  }
+
+  /**
+   *
+   * @param {Array} data
+   * @param {string} type
+   * @param {string} key
+   * @return new object sorted
+   */
+  static sortTweets(data, type, key) {
+    if (type == "date") {
+      data.sort((a, b) => {
+        return new Date(b[key]) - new Date(a[key]);
+      });
+    } else {
+      data.sort((a, b) => {
+        return b[key] - a[key];
+      });
+    }
+    return data;
   }
 }
 
