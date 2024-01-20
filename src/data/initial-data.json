@@ -1,6 +1,36 @@
 {
   "current-user": {
-    "id": 789
+    "id": 789,
+    "displayName": "Bertin Selendo",
+    "userName": "bertinselendo",
+    "cover": "/images/profils/cover.jpeg",
+    "avatar": "/images/profils/avatar.jpg",
+    "description": "Développeur web, photographe, vidéographe, infographe.",
+    "follows": 50,
+    "followers": 11,
+    "isCertified": true,
+    "infosData": [
+      {
+        "nom": "position",
+        "isLink": false,
+        "text": "Kinshasa, RDC"
+      },
+      {
+        "nom": "website",
+        "isLink": true,
+        "text": "bertinselendo.com"
+      },
+      {
+        "nom": "birthday",
+        "isLink": false,
+        "text": "Naissance le 26 novembre"
+      },
+      {
+        "nom": "joinDate",
+        "isLink": false,
+        "text": "A rejoint Twitter en juillet 2014"
+      }
+    ]
   },
   "tweets": [
     {

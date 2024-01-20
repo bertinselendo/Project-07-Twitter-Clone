@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom";
-import UsersServices from "../models/usersServices";
 import EditorIcons from "../templates/icons/editorIcons";
+import { useContext } from "react";
+import { DataContext } from "./contextProvider";
 
 function TweetEditor() {
-  const user = UsersServices;
-  const currentUserID = user.currentUserID;
+  const { contextData, setContextData } = useContext(DataContext);
+  const user = contextData["current-user"];
 
   return (
     <div className="flex gap-2 p-4 border-b border-gray-text">
       <div className="">
-        <Link to={user.getUserName(currentUserID)}>
+        <Link to={user.userName} alt={user.displayName}>
           <img
-            src={user.getUserAvatar(currentUserID)}
+            src={user.avatar}
             alt=""
             className="max-w-12 max-h-12 rounded-full border border-white"
           />
