@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import TweetServices from "../models/tweetServices.js";
 import TweetLayout from "../templates/tweet.jsx";
+import { DataContext } from "./contextProvider.jsx";
 
 function TweetsList() {
-  const tweets = TweetServices.tweets();
+  // const tweets = TweetServices.tweets();
+  const { contextData, setContextData } = useContext(DataContext);
+  const tweets = contextData.tweets;
   const sortedTweets = TweetServices.sortTweets(tweets, "date", "lastTime");
 
   return (
