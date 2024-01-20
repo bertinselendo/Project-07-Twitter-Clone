@@ -1,5 +1,7 @@
 {
-  "current-user": {},
+  "current-user": {
+    "id": 789
+  },
   "tweets": [
     {
       "id": 0,

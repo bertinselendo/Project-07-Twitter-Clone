@@ -8,6 +8,7 @@ import Profile from "./pages/profile";
 import NotFound from "./pages/404";
 import UnderConstruction from "./pages/underConstruction";
 import UserServices from "./models/usersServices";
+import ContextProvider from "./components/contextProvider";
 
 const user = UserServices;
 
@@ -54,6 +55,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ContextProvider>
+      <RouterProvider router={router} />
+    </ContextProvider>
   </React.StrictMode>
 );
