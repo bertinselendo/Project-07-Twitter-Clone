@@ -9,14 +9,19 @@ export default function Navbar() {
 
   return (
     <>
-      <ul className="navbar">
+      <ul className="mt-4">
         {navbarItems.map((navItem, index) => (
-          <li key={index} className="hover-gray hover-radius">
-            <Link to={navItem.link}>
-              <div className="li-div">
-                <span className="sl-icon">
+          <li key={index}>
+            <Link
+              to={navItem.link}
+              className="flex hover:bg-gray p-4 rounded-full w-fit mr-4"
+            >
+              <div className="flex gap-4 align-middle font-bold">
+                <span className="relative">
                   {navItem.nbrs != false ? (
-                    <span className="sl-notification">{navItem.nbrs}</span>
+                    <span className="absolute top-[-12px] right-[-12px] bg-blue text-[10px] rounded-full flex h-5 w-5 items-center justify-center">
+                      {navItem.nbrs}
+                    </span>
                   ) : (
                     ""
                   )}

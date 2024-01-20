@@ -5,17 +5,20 @@ import NavIcons from "../../templates/icons/navIcons";
 export default function TrendsSection() {
   return (
     <>
-      <div className="trends-section">
-        <div className="trends-seaction-header">
-          <h4>Trends for you</h4>
-          <span className="icon">
-            <NavIcons icon="setting" />
+      <div className="bg-gray rounded-xl flex flex-col">
+        <div className="flex items-center justify-between gap-4 p-4">
+          <h4 className="font-bold">Trends for you</h4>
+          <span className="">
+            <NavIcons
+              icon="setting"
+              className="hover:fill-blue-hover cursor-pointer"
+            />
           </span>
         </div>
-        <div className="trends-section-content">
+        <div className="">
           <Trends />
         </div>
-        <div className="trends-section-more hover-dark">
+        <div className="p-4 text-sm font-bold text-blue hover:text-blue-hover">
           <a href="#">Show more</a>
         </div>
       </div>

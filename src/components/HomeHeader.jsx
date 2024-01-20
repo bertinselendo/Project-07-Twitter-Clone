@@ -1,8 +1,8 @@
 function HomeHeader() {
   return (
-    <div className="header">
-      <h1 className="page-title">Home</h1>
-      <div className="top-tweets">
+    <div className="flex items-center justify-between p-4 h-16 border-b border-gray-text">
+      <h1 className="font-bold text-xl">Home</h1>
+      <div className="">
         <svg
           width="20"
           height="18"

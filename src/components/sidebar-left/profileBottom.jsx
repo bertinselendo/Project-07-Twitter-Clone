@@ -10,19 +10,34 @@ export default function ProfileBottom() {
 
   return (
     <>
-      <Link to={user.getUserName(currentUserID)} className="sl-bs-body">
-        <div className="avatar-leftside">
-          <img src={user.getUserAvatar(currentUserID)} alt="" />
+      <Link
+        to={user.getUserName(currentUserID)}
+        className="flex items-center p-2"
+      >
+        <div className="">
+          <img
+            src={user.getUserAvatar(currentUserID)}
+            alt=""
+            className="w-10 rounded-full mr-2"
+          />
         </div>
-        <div className="sl-bs-body-content">
-          <div className="sl-bs-body-title">
+        <div className="flex flex-col gap-0">
+          <div className="flex items-center gap-2 text-base font-bold">
             {user.getUserDisplayName(currentUserID)}
-            <span>{user.isUserCertified(currentUserID) ? <Badges badge="locked" /> : ""}</span>
+            <span className="">
+              {user.isUserCertified(currentUserID) ? (
+                <Badges badge="locked" className="w-3" />
+              ) : (
+                ""
+              )}
+            </span>
           </div>
-          <div className="sl-bs-body-username">{user.getUserName(currentUserID)}</div>
+          <div className="text-sm text-text-gray">
+            {user.getUserName(currentUserID)}
+          </div>
         </div>
       </Link>
-      <div className="more-icon icon">
+      <div className="hover:bg-gray rounded-full w-10 h-10 flex justify-center items-center mr-2 cursor-pointer">
         <Moreicon />
       </div>
     </>

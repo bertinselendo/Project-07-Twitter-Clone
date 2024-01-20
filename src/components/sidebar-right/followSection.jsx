@@ -4,14 +4,14 @@ import WhoToFollow from "../../components/whoToFollow";
 export default function FollowSection() {
   return (
     <>
-      <div className="follow-section">
-        <div className="follow-seaction-header">
-          <h4>Who to follow</h4>
+      <div className="bg-gray rounded-xl flex flex-col">
+        <div className="flex items-center justify-between gap-4 p-4">
+          <h4 className="font-bold">Who to follow</h4>
         </div>
-        <div className="follow-section-content">
+        <div className="">
           <WhoToFollow />
         </div>
-        <div className="follow-section-more hover-dark">
+        <div className="p-4 text-sm font-bold text-blue hover:text-blue-hover">
           <a href="#">Show more</a>
         </div>
       </div>

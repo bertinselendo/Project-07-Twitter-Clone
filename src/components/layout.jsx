@@ -7,7 +7,7 @@ function Layout({ children }) {
   return (
     <>
       <SidebarLeft />
-      <main className="timeline">
+      <main className="w-[680px] border-x border-gray-text">
         <Outlet />
       </main>
       <SidebarRight />

@@ -6,9 +6,9 @@ import TrendsSection from "@components//sidebar-right/trendsSection";
 
 export default function SidebarRight() {
   return (
-    <div className="rigth-sidebar">
+    <div className="w-[360px] p-4 flex flex-col gap-2 sticky top-0 h-screen">
       <SearchBar />
-      <div className="inner-scroll-effect">
+      <div className="overflow-y-scroll flex flex-col gap-4 scrollbar-hide">
         <TrendsSection />
         <FollowSection />
         <Footer />

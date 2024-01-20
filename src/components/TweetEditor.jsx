@@ -7,19 +7,23 @@ function TweetEditor() {
   const currentUserID = user.currentUserID;
 
   return (
-    <div className="tweet-editor">
-      <div className="avatar">
+    <div className="flex gap-2 p-4 border-b border-gray-text">
+      <div className="">
         <Link to={user.getUserName(currentUserID)}>
-          <img src={user.getUserAvatar(currentUserID)} alt="" />
+          <img
+            src={user.getUserAvatar(currentUserID)}
+            alt=""
+            className="max-w-12 max-h-12 rounded-full border border-white"
+          />
         </Link>
       </div>
-      <form className="tweet-editor-form">
+      <form className="w-full flex flex-col gap-2">
         <textarea
-          className="tweet-editor-input"
+          className="w-full p-2 rounded bg-transparent text-xl border-none outline-none"
           placeholder="What's happening?"
         ></textarea>
-        <div className="tweet-editor-buttons">
-          <div className="tweet-editor-actions">
+        <div className="flex justify-between">
+          <div className="flex gap-4">
             <div>
               <EditorIcons icon="image" />
             </div>
@@ -36,7 +40,11 @@ function TweetEditor() {
               <EditorIcons icon="schedule" />
             </div>
           </div>
-          <input type="submit" className="button" value="Tweet" />
+          <input
+            type="submit"
+            className="bg-blue hover:bg-blue-hover py-2 px-6 rounded-full cursor-pointer"
+            value="Tweet"
+          />
         </div>
       </form>
     </div>

@@ -11,23 +11,31 @@ function TweetLayout(props) {
   const author = TweetServices.getAuthorTweet(tweet.authorID);
 
   return (
-    <div className="tweet">
-      <div className="tweet-avatar">
+    <div className="flex gap-4 p-4 w-full border-b border-gray-text">
+      <div className="">
         <Link to={author.userName}>
-          <img src={author.avatar} alt="" />
+          <img
+            src={author.avatar}
+            alt=""
+            className="max-w-12 max-h-12 rounded-full"
+          />
         </Link>
       </div>
-      <div className="tweet-content">
-        <div className="tweet-title">
-          <Link to={author.userName}><h3 className="tweet-title-author">{author.displayName}</h3></Link>
-          <span className="tweet-title-details">
-            {author.isCertified && <Badges badge="certified" />}
+      <div className="flex flex-col gap-2 w-full">
+        <div className="flex gap-1 items-center">
+          <Link to={author.userName}>
+            <h3 className="">{author.displayName}</h3>
+          </Link>
+          <span className="">
+            {author.isCertified && (
+              <Badges badge="certified" className="w-4 fill-blue" />
+            )}
           </span>
-          <span className="tweet-title-details">@{author.userName}</span>
-          <span className="tweet-title-details">·</span>
-          <span className="tweet-title-details">{tweet.lastTime}</span>
+          <span className="">@{author.userName}</span>
+          <span className="">·</span>
+          <span className="">{tweet.lastTime}</span>
         </div>
-        <div className="tweet-text">{parse(tweet.text)}</div>
+        <div className="">{parse(tweet.text)}</div>
         <TweetImages images={tweet.image} />
         <TweetActions
           id={tweet.id}

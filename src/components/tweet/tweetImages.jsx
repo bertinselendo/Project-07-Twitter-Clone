@@ -6,8 +6,8 @@ function TweetImages(props) {
   }
 
   return (
-    <div className="tweet-image">
-      <img src={images} alt="" />
+    <div>
+      <img src={images} alt="" className="rounded-xl" />
     </div>
   );
 }
