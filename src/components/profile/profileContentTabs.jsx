@@ -1,8 +1,9 @@
 import React from "react";
 import TweetsList from "../tweetsList";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import ProfileTweetsList from "./profileTweetsList";
 
-export default function ProfileContentTabs() {
+export default function ProfileContentTabs({ user }) {
   const notContentClasses = "h-[40vh] flex justify-center items-center";
   return (
     <>
@@ -15,7 +16,7 @@ export default function ProfileContentTabs() {
           <Tab>J'aimes</Tab>
         </TabList>
         <TabPanel>
-          <h2>Post de ...</h2>
+          <ProfileTweetsList user={user} />
         </TabPanel>
         <TabPanel>
           <div className={notContentClasses}>Under Construction</div>

@@ -9,6 +9,15 @@ class TweetServices {
     return tweets;
   }
 
+  static getUserTweets(data, userID) {
+    const tweets = data;
+    const userTweets = tweets.filter(
+      (userTweets) => userTweets.authorID == userID
+    );
+
+    return userTweets;
+  }
+
   static getAuthorTweet(userId) {
     let rUser = false;
 
