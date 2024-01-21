@@ -15,7 +15,7 @@ function TweetLayout(props) {
   return (
     <div className="flex gap-4 p-4 w-full border-b border-gray-text">
       <div className="">
-        <Link to={author.userName}>
+        <Link to={"/" + author.userName}>
           <img
             src={author.avatar}
             alt=""
