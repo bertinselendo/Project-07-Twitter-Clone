@@ -1,12 +1,27 @@
 import React from "react";
 import { useState } from "react";
 import { createContext } from "react";
-import dataJson from "../data/initial-data.json";
+import dataObject from "../data/initial-data.json";
 
 const DataContext = createContext();
 
+const localDataContext = localStorage.getItem("LocalDataContext");
+if (localDataContext == null) {
+  const dataJson = JSON.stringify(dataObject);
+  localStorage.setItem("LocalDataContext", dataJson);
+}
+
+const data =
+  localDataContext == null ? dataObject : JSON.parse(localDataContext);
+
 export default function ContextProvider({ children }) {
-  const [contextData, setContextData] = useState(dataJson);
+  const [contextData, setData] = useState(data);
+
+  function setContextData(updatedData) {
+    setData(updatedData);
+    const dataJson = JSON.stringify(updatedData);
+    localStorage.setItem("LocalDataContext", dataJson);
+  }
 
   return (
     <>
