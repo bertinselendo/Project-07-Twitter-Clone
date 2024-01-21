@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.react-tabs__tab--selected {
+  color: #ffffff !important;
+  position: relative;
+}
+
+.react-tabs__tab--selected:after {
+  content: "";
+  height: 5px;
+  background: #1c9bf1;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+}

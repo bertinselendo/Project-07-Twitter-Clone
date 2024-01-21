@@ -5,6 +5,7 @@ import ProfileInfos from "../components/profile/profileInfos";
 import UsersServices from "../models/usersServices";
 import ProfileContent from "../components/profile/profileContent";
 import Profile404 from "../components/profile/profile404";
+import ProfileContentTabs from "../components/profile/profileContentTabs";
 
 function Profile() {
   const { userName } = useParams("userName");
@@ -18,6 +19,7 @@ function Profile() {
     <>
       <ProfileHeader user={user} />
       <ProfileContent user={user} />
+      <ProfileContentTabs user={user} />
     </>
   ) : (
     <Profile404 userName={userName} />
