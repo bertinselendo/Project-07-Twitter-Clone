@@ -1,18 +1,51 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import ActionIcons from "../../templates/icons/actionIcons";
+import LikesServices from "../../models/likesServices";
+import { DataContext } from "../contextProvider";
 
 export default function TweetActions(props) {
   const nbrs = props;
   const tweetID = props.id;
 
-  const [likes, setLike] = useState(nbrs.likes);
+  const { contextData, setContextData } = useContext(DataContext);
+  const currentUserID = contextData["current-user"].id;
+  const likesData = contextData.likes;
+  const likes = LikesServices.getLikes(likesData, tweetID);
+
+  const isLiked = LikesServices.isPostLiked(likesData, tweetID, currentUserID);
 
   function handledLike(event) {
     const classList = event.currentTarget.classList;
 
-    classList.contains("active")
-      ? (classList.remove("active"), setLike(likes - 1))
-      : (classList.add("active"), setLike(likes + 1));
+    const isLiked = LikesServices.isPostLiked(
+      likesData,
+      tweetID,
+      currentUserID
+    );
+
+    if (!isLiked) {
+      const response = LikesServices.postLike(
+        contextData,
+        setContextData,
+        tweetID,
+        currentUserID
+      );
+
+      if (response) {
+        classList.add("active");
+      }
+    } else {
+      const response = LikesServices.deleteLike(
+        contextData,
+        setContextData,
+        tweetID,
+        currentUserID
+      );
+
+      if (response) {
+        classList.remove("active");
+      }
+    }
   }
 
   return (
@@ -33,7 +66,7 @@ export default function TweetActions(props) {
       </span>
       <span
         role="button"
-        className="text-text-gray group/like"
+        className={"text-text-gray group/like " + (isLiked ? "active" : "none")}
         onClick={handledLike}
       >
         <ActionIcons
