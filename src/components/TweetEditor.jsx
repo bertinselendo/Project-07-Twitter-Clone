@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { DataContext } from "./contextProvider";
 import TweetServices from "../models/tweetServices";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 function TweetEditor() {
   const { contextData, setContextData } = useContext(DataContext);
@@ -40,6 +41,12 @@ function TweetEditor() {
     });
 
     reset({ message: "" });
+
+    // Notif
+    toast.loading("Posting...");
+    setTimeout(() => {
+      toast.success("Tweet publier");
+    }, 1000);
   };
 
   return (

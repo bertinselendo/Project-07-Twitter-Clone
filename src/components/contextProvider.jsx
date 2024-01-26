@@ -22,12 +22,6 @@ export default function ContextProvider({ children }) {
     setData(updatedData);
     const dataJson = JSON.stringify(updatedData);
     localStorage.setItem("LocalDataContext", dataJson);
-
-    // Notif
-    toast.loading("Posting...");
-    setTimeout(() => {
-      toast.success("Tweet publier");
-    }, 1000);
   }
 
   return (
