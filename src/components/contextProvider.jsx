@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { createContext } from "react";
 import dataObject from "../data/initial-data.json";
+import { Toaster, toast } from "sonner";
 
 const DataContext = createContext();
 
@@ -21,6 +22,12 @@ export default function ContextProvider({ children }) {
     setData(updatedData);
     const dataJson = JSON.stringify(updatedData);
     localStorage.setItem("LocalDataContext", dataJson);
+
+    // Notif
+    toast.loading("Posting...");
+    setTimeout(() => {
+      toast.success("Tweet publier");
+    }, 1000);
   }
 
   return (
@@ -31,6 +38,7 @@ export default function ContextProvider({ children }) {
           setContextData,
         }}
       >
+        <Toaster richColors closeButton position="bottom-left" theme="dark" />
         {children}
       </DataContext.Provider>
     </>
